@@ -7,7 +7,8 @@ pollos_petrel/evaro_01_submission.csv: pollos_petrel/example_submission.csv
 
 .PHONY: \
     clean \
-    submissions
+    submissions \
+	tests
 
 check:
 	R -e "library(styler)" \
