@@ -13,7 +13,7 @@ for n_row, data_row in test_set.iterrows():
     if np.isnan(data_row["Longitud_ala"]):
         morphometric_variable = "Masa"
         mass_train = data_row[morphometric_variable]
-        interval = 1
+        interval = 0.8
     else:
         morphometric_variable = "Longitud_ala"
         mass_train = data_row[morphometric_variable]
@@ -32,4 +32,4 @@ for n_row, data_row in test_set.iterrows():
     results_dic["target"].append(similar_values.median().round())
 
 results_df = pd.DataFrame(results_dic)
-results_df.to_csv("pollos_petrel/datletas_encobijados_submission_reloaded.csv", index=False)
+results_df.to_csv("pollos_petrel/datletas_encobijados_reloaded_submission.csv", index=False)
