@@ -1,6 +1,5 @@
 submissions: \
     pollos_petrel/evaro_01_submission.csv \
-	pollos_petrel/datletas_encobijados_submission_00.csv \
 	pollos_petrel/datletas_encobijados_first_submission.csv \
 	pollos_petrel/datletas_encobijados_reloaded_submission.csv
 
