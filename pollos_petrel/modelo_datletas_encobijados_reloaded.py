@@ -13,7 +13,7 @@ for n_row, data_row in test_set.iterrows():
     if np.isnan(data_row["Longitud_ala"]):
         morphometric_variable = "Masa"
         mass_train = data_row[morphometric_variable]
-        interval = 0.8
+        interval = 0.9
     else:
         morphometric_variable = "Longitud_ala"
         mass_train = data_row[morphometric_variable]
