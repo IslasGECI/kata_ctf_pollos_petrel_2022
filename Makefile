@@ -16,6 +16,9 @@ pollos_petrel/datletas_encobijados_first_submission.csv:
 	python pollos_petrel/modelo_datletas_encobijados.py
 
 
+format:
+	black --line-length 100 pollos_petrel
+
 .PHONY: \
     clean \
     submissions

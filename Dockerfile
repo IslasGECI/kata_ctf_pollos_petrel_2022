@@ -5,3 +5,5 @@ RUN apt update && apt install --yes \
 
 RUN pip install \
     sklearn
+
+RUN pip install --upgrade black
