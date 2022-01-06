@@ -32,4 +32,27 @@ for n_row, data_row in test_set.iterrows():
     results_dic["target"].append(similar_values.mean().round())
 
 results_df = pd.DataFrame(results_dic)
-results_df.to_csv("pollos_petrel/datletas_encobijados_first_submission.csv", index=False)
+
+dates = []
+nido = []
+years = []
+
+for n_row, data_row in results_df.iterrows():
+    dates.append(data_row["id"][0:10])
+    years.append(data_row["id"][0:4])
+    nido.append(data_row["id"][11:])
+
+results_df["date"] = dates
+results_df["id_nido"] = nido
+results_df["date_dt"] = pd.to_datetime(results_df["date"])
+results_df["year"] = years
+
+corrected_df = results_df.copy()
+for nido, data in results_df.groupby(by=["id_nido","year"]):
+    first_age_predicted = data["target"].iloc[0]
+    n_days = len(data)
+    corrected_ages = np.linspace(first_age_predicted,first_age_predicted+n_days, n_days+1)
+    corrected_df["target"].loc[data.index] = corrected_ages[:-1]
+    
+
+corrected_df.to_csv("pollos_petrel/datletas_encobijados_last_submission.csv", index=False)
