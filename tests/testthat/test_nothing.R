@@ -20,6 +20,8 @@ describe("split id", {
 describe("First model", {
   data <- tibble(id=1:3, Masa=runif(3, min=7.4, max=107))
   it("Return allways 36.4", {
-
+    expected <- tibble(id=1:3, target = 35.99)
+    obtained <- return_mean_train_data()
+    expect_equal(expected, obtained)
   })
 })
