@@ -29,4 +29,5 @@ format:
 
 clean:
 	rm --force pollos_petrel/evaro_01_submission.csv
+	rm --force pollos_petrel/datletas_*.csv
 
