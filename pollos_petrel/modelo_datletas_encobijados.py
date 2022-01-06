@@ -17,7 +17,7 @@ for n_row, data_row in test_set.iterrows():
     else:
         morphometric_variable = "Longitud_ala"
         mass_train = data_row[morphometric_variable]
-        interval = 1
+        interval = mass_train * 0.014
     similar_values = train_set[
         train_set[morphometric_variable].between(mass_train - interval, mass_train + interval)
     ]["target"]
