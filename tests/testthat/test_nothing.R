@@ -16,3 +16,10 @@ describe("split id", {
     expect_equal(expected, obtained)
   })
 })
+
+describe("First model", {
+  data <- tibble(id=1:3, Masa=runif(3, min=7.4, max=107))
+  it("Return allways 36.4", {
+
+  })
+})
