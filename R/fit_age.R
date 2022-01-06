@@ -7,7 +7,9 @@ split_id <- function (long_tarso) {
   return(id_train)
 }
 
-return_mean_train_data <- function() {
-  expected <- tibble(id=1:3, target = 35.99)
+return_mean_train_data <- function(data) {
+  expected <- data %>% 
+    mutate(target = 35.99) %>%
+    select(c(id, target))
   return(expected)
 }
