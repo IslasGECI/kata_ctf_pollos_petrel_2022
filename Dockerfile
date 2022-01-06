@@ -4,5 +4,4 @@ RUN apt update && apt install --yes \
     gnuplot
 
 RUN pip install \
-    sklearn \
-    tensorflow
+    sklearn
