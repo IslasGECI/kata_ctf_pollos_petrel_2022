@@ -33,3 +33,16 @@ describe("First model", {
     expect_equal(expected, obtained)
   })
 })
+
+
+describe("Second model", {
+  data <- tibble(id=1:3, Masa=runif(3, min=7.4, max=107))
+  it("Return lineal model", {
+    ajuste <- 23.92 
+    expected <- data %>% 
+      mutate(target = Masa - ajuste) %>%
+      select(c(id, target))
+    obtained <- return_lineal_train_data(data)
+    expect_equal(expected, obtained)
+  })
+})

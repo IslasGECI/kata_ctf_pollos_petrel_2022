@@ -13,3 +13,11 @@ return_mean_train_data <- function(data) {
     select(c(id, target))
   return(expected)
 }
+
+return_lineal_train_data <- function(data) {
+  ajuste <- 23.92 
+  expected <- data %>% 
+    mutate(target = Masa - ajuste) %>%
+    select(c(id, target))
+  return(expected)
+}
