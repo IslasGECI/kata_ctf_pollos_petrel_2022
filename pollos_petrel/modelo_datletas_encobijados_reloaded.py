@@ -29,7 +29,7 @@ for n_row, data_row in test_set.iterrows():
         train_set[morphometric_variable].between(mass_train - interval, mass_train + interval)
     ]["target"]
     results_dic["id"].append(data_row["id"])
-    results_dic["target"].append(similar_values.median().round())
+    results_dic["target"].append(similar_values.mean().round())
 
 results_df = pd.DataFrame(results_dic)
 results_df.to_csv("pollos_petrel/datletas_encobijados_reloaded_submission.csv", index=False)
