@@ -23,7 +23,13 @@ describe("First model", {
   data <- tibble(id=1:3, Masa=runif(3, min=7.4, max=107))
   it("Return allways 35.99", {
     expected <- tibble(id=1:3, target = 35.99)
-    obtained <- return_mean_train_data()
+    obtained <- return_mean_train_data(data)
+    expect_equal(expected, obtained)
+  })
+  data <- tibble(id=4:8, Masa=runif(5, min=7.4, max=107))
+  it("Return allways 35.99", {
+    expected <- tibble(id=4:8, target = 35.99)
+    obtained <- return_mean_train_data(data)
     expect_equal(expected, obtained)
   })
 })
