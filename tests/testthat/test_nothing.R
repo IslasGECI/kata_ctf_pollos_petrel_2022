@@ -8,6 +8,7 @@ describe("nothing", {
 
 describe("split id", {
   it("return 1", {
+    set.seed(20220106)
     data <- read_csv("pollos_petrel/train.csv")
     long_tarso <- data %>%
     drop_na(Longitud_tarso)
