@@ -20,14 +20,14 @@ for n_row, data_row in test_set.iterrows():
         interval = 1
     similar_values = train_set[
         train_set[morphometric_variable].between(mass_train - interval, mass_train + interval)
-    ][morphometric_variable]
+    ]["target"]
     if len(similar_values) == 0:
         morphometric_variable = "Masa"
         mass_train = data_row[morphometric_variable]
         interval = 1
     similar_values = train_set[
         train_set[morphometric_variable].between(mass_train - interval, mass_train + interval)
-    ][morphometric_variable]
+    ]["target"]
     results_dic["id"].append(data_row["id"])
     results_dic["target"].append(similar_values.mean().round())
 
