@@ -1,0 +1,26 @@
+Package: FitAge
+Type: Package
+Title: pollos petrel contest - fit age
+Version: 0.1.0
+Authors@R: c(
+    person(given = "Ciencia de Datos",
+           family = "GECI",
+           role = c("aut", "cre", "cph"),
+           email = "ciencia.datos@islas.org.mx"
+           ))
+Description: First day of work
+Imports:
+    comprehenr,
+    data.table,
+    MASS,
+    R6,
+    tidyverse
+Suggests:
+    devtools,
+    roxygen2,
+    testthat
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.2
