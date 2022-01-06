@@ -1,8 +1,8 @@
 import pandas as pd
 
 
-train_path = "train.csv"
-test_path = "test.csv"
+train_path = "pollos_petrel/train.csv"
+test_path = "pollos_petrel/test.csv"
 
 train_set = pd.read_csv(train_path)
 test_set = pd.read_csv(test_path)
@@ -16,4 +16,4 @@ for n_row,data_row in test_set.iterrows():
     results_dic["target"].append(similar_values.median().round())
 
 results_df = pd.DataFrame(results_dic)
-results_df.to_csv("datletas_encobijados_first_submission.csv", index=False)
+results_df.to_csv("pollos_petrel/datletas_encobijados_first_submission.csv", index=False)
