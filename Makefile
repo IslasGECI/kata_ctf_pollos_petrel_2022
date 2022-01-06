@@ -12,3 +12,5 @@ pollos_petrel/evaro_01_submission.csv: pollos_petrel/example_submission.csv
 clean:
 	rm --force pollos_petrel/evaro_01_submission.csv
 
+tests:
+	R -e "devtools::test()"
